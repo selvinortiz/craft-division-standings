@@ -27,7 +27,7 @@ class DivisionStandingsPlugin extends BasePlugin
 
     public function getDescription()
     {
-        return 'Utilities to help you render division standings from league data';
+        return 'Utilities to help you calculate and generate Divisional Standings';
     }
 
     public function getDeveloper()
