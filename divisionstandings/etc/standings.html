@@ -1,0 +1,103 @@
+{% set southDivision = [
+	{
+		col1: "Team A",
+		col2: 0,
+		col3: 26
+	},
+	{
+		col1: "Team B",
+		col2: 6,
+		col3: 20
+	},
+	{
+		col1: "Team C",
+		col2: 16,
+		col3: 10
+	},
+	{
+		col1: "Team D",
+		col2: 17,
+		col3: 9
+	},
+	{
+		col1: "Team E",
+		col2: 14,
+		col3: 12
+	},
+ ] %}
+{% set northDivision = [
+	{
+		col1: "Team B",
+		col2: 6,
+		col3: 20
+	},
+	{
+		col1: "Team A",
+		col2: 5,
+		col3: 21
+	},
+	{
+		col1: "Team C",
+		col2: 10,
+		col3: 16
+	},
+	{
+		col1: "Team D",
+		col2: 17,
+		col3: 9
+	},
+	{
+		col1: "Team E",
+		col2: 14,
+		col3: 12
+	},
+ ] %}
+
+{% hook "generateDivisionStandings" %}
+
+<table>
+	<thead>
+		<tr>
+			<th>Team</th>
+			<th>W</th>
+			<th>L</th>
+			<th>W%</th>
+			<th>GB</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for team in southDivision %}
+			<tr>
+				<td>{{ team.name }}</td>
+				<td>{{ team.wins }}</td>
+				<td>{{ team.losses }}</td>
+				<td>{{ team.winning }}</td>
+				<td>{{ team.gamesBack }}</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+
+<table>
+	<thead>
+		<tr>
+			<th>Team</th>
+			<th>W</th>
+			<th>L</th>
+			<th>W%</th>
+			<th>GB</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for team in northDivision %}
+			<tr>
+				<td>{{ team.name }}</td>
+				<td>{{ team.wins }}</td>
+				<td>{{ team.losses }}</td>
+				<td>{{ team.winning }}</td>
+				<td>{{ team.gamesBack }}</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
